@@ -109,12 +109,52 @@
       padding: 0 20px;
     }
 
-    .garlic { background-color: #d8b200; }
-    .tomato { background-color: #c0392b; }
-    .bbq { background-color: #27ae60; }
-    .ingredients { background-color: #fff; }
-    .process { background-color: #ff9900; }
-    .garlicOp {background-color: #d8b200;}
+    :root {
+  
+  --garlic: #f3e5ab;     /* soft garlic cream */
+  --tomato: #e74c3c;     /* tomato red */
+  --bbq: #8b4513;        /* smoky brown */
+  --ingredients: #ffffff;
+  --process: #f39c12;    /* cooking orange */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    
+    --garlic: #bfa76a;
+    --tomato: #c0392b;
+    --bbq: #5a2e0c;
+    --ingredients: #1e1e1e;
+    --process: #d68910;
+  }
+}
+
+
+.garlic,
+.garlicOp {
+  background-color: var(--garlic);
+  color: #000;
+}
+
+.tomato {
+  background-color: var(--tomato);
+  color: #fff;
+}
+
+.bbq {
+  background-color: var(--bbq);
+  color: #fff;
+}
+
+.ingredients {
+  background-color: var(--ingredients);
+  color: inherit;
+}
+
+.process {
+  background-color: var(--process);
+  color: #000;
+}
 
     footer {
       background: #ff9900;
@@ -185,7 +225,7 @@
   </nav>
 
   <section id="about" class="about">
-    <img src="WEB_PORTPOLIO/Brandlogo (1).png" alt="Fi chips brand" style="max-width:500px; height: auto;">
+    <img src="WEB_PORTPOLIO/Brandlogo_1_PNG.png" alt="Fi chips brand" style="max-width:500px; height: auto;">
     <div class="flavour">
       <p class="description">
         FI Fish Chips is near of you with an innovative snack experience combining the nutritional benefits of freshwater fish 
