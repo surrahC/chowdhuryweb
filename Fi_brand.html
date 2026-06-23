@@ -110,52 +110,70 @@
     }
 
     :root {
-  
-  --garlic: #f3e5ab;     /* soft garlic cream */
-  --tomato: #e74c3c;     /* tomato red */
-  --bbq: #8b4513;        /* smoky brown */
-  --ingredients: #ffffff;
-  --process: #f39c12;    /* cooking orange */
+  /* LIGHT MODE GRADIENTS */
+  --garlic: linear-gradient(135deg, #f5e6b3, #e6c96a);
+  --tomato: linear-gradient(135deg, #ff6a5a, #c0392b);
+  --bbq: linear-gradient(135deg, #8b4513, #3e1f0d);
+  --ingredients: linear-gradient(135deg, #ffffff, #f2f2f2);
+  --process: linear-gradient(135deg, #ffb347, #ff8000);
+
+  --text-dark: #111;
+  --text-light: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    
-    --garlic: #bfa76a;
-    --tomato: #c0392b;
-    --bbq: #5a2e0c;
-    --ingredients: #1e1e1e;
-    --process: #d68910;
+    /* DARK MODE GRADIENTS (deeper, not glowing) */
+    --garlic: linear-gradient(135deg, #7a6a2f, #4d421a);
+    --tomato: linear-gradient(135deg, #992d22, #5c1a14);
+    --bbq: linear-gradient(135deg, #3b1f0f, #1a0d07);
+    --ingredients: linear-gradient(135deg, #1e1e1e, #121212);
+    --process: linear-gradient(135deg, #cc7a00, #7a4a00);
+
+    --text-dark: #f5f5f5;
+    --text-light: #ffffff;
   }
 }
 
+/* COMMON SECTION STYLE (prevents melting) */
+.section {
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 10px;
 
-.garlic,
-.garlicOp {
-  background-color: var(--garlic);
-  color: #000;
+  /* KEY: separation */
+  border: 1.5px solid rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  /* subtle spacing effect */
+  backdrop-filter: blur(2px);
+}
+
+/* APPLY GRADIENTS */
+.garlic, .garlicOp {
+  background: var(--garlic);
+  color: var(--text-dark);
 }
 
 .tomato {
-  background-color: var(--tomato);
-  color: #fff;
+  background: var(--tomato);
+  color: var(--text-light);
 }
 
 .bbq {
-  background-color: var(--bbq);
-  color: #fff;
+  background: var(--bbq);
+  color: var(--text-light);
 }
 
 .ingredients {
-  background-color: var(--ingredients);
-  color: inherit;
+  background: var(--ingredients);
+  color: var(--text-dark);
 }
 
 .process {
-  background-color: var(--process);
-  color: #000;
+  background: var(--process);
+  color: var(--text-dark);
 }
-
     footer {
       background: #ff9900;
       color: #fff;
